@@ -13,6 +13,73 @@
     <meta property="og:type" content="website">
     <link rel="icon" type="image/png" href="images/LOGO.png">
 
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Paban Bhandari",
+        "jobTitle": "Web Developer",
+        "description": "Passionate web developer specializing in modern, responsive websites and web applications",
+        "url": "https://pabanbhandari.com",
+        "image": "https://pabanbhandari.com/images/profile-photo.jpg",
+        "sameAs": [
+            "https://www.linkedin.com/in/paban-bhandari-b38239264/",
+            "https://github.com/Paban-Bhandari",
+            "https://www.instagram.com/quixotix__01/"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kathmandu",
+            "addressCountry": "Nepal"
+        },
+        "knowsAbout": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Bootstrap",
+            "Python",
+            "Web Development",
+            "Frontend Development",
+            "Responsive Design",
+            "UI/UX Design"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Freelance"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+977-9848436507",
+            "contactType": "personal",
+            "email": "bhandaripawan841@gmail.com"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Paban Bhandari Portfolio",
+        "url": "https://pabanbhandari.com",
+        "description": "Portfolio website showcasing web development projects and skills",
+        "author": {
+            "@type": "Person",
+            "name": "Paban Bhandari"
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "Paban Bhandari"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://pabanbhandari.com/#projects",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@700&display=swap"
@@ -34,6 +101,22 @@
 </head>
 
 <body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="images/LOGO.png" alt="Paban Logo" width="80" height="80" />
+            </div>
+            <div class="loading-text">
+                <h3>Paban Bhandari</h3>
+                <p>Loading amazing things...</p>
+            </div>
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-opacity-75 shadow-sm" id="mainNavbar"
         aria-label="Main navigation">
@@ -42,6 +125,7 @@
                 <img src="images/LOGO.png" alt="Paban Logo" width="40" height="40" class="me-2" />
                 <span class="fw-bold" style="font-family: 'Montserrat', sans-serif;">Paban Bhandari</span>
             </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -53,7 +137,7 @@
                     <li class="nav-item"><a class="nav-link" href="#about" aria-label="About">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects" aria-label="Projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact" aria-label="Contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resume.pdf" target="_blank" aria-label="CV"><i
+                    <li class="nav-item"><a class="nav-link" href="cv.pdf" target="_blank" aria-label="CV"><i
                                 class="bi bi-file-earmark-person"></i> CV</a></li>
                 </ul>
             </div>
@@ -63,6 +147,9 @@
     <!-- Hero Section -->
     <section id="home" class="hero-section d-flex align-items-center position-relative"
         style="height: 90vh; background: linear-gradient(135deg, #232526 0%, #414345 100%); overflow: hidden;">
+        <!-- Particle Animation Background -->
+        <div id="particles-js" class="particles-container"></div>
+        
         <!-- SVG Animated Background -->
         <svg class="position-absolute top-0 start-0 w-100 h-100" style="z-index:0; opacity:0.15;"
             preserveAspectRatio="none" viewBox="0 0 1440 320">
@@ -129,7 +216,7 @@
                         Python, and I'm actively expanding my skills in React and modern web frameworks. I thrive on
                         learning, collaborating, and turning ideas into impactful digital products.
                     </p>
-                    <a href="resume.pdf" class="btn btn-yellow btn-sm mb-3" target="_blank">
+                    <a href="cv.pdf" class="btn btn-yellow btn-sm mb-3" target="_blank">
                         <i class="bi bi-download"></i> Download CV
                     </a>
                     <p><strong>Tech Stack:</strong></p>
@@ -458,6 +545,9 @@
         </div>
     </footer>
 
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- Scroll Up Indicator  -->
     <a href="#home" class="scroll-up-indicator" title="Scroll to Top" aria-label="Scroll to Top">
         <i class="bi bi-arrow-up-circle-fill"></i>
@@ -472,6 +562,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 
