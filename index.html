@@ -250,83 +250,21 @@
                         <button class="filter-btn" data-filter=".web">Web Development</button>
                         <button class="filter-btn" data-filter=".frontend">Frontend</button>
                         <button class="filter-btn" data-filter=".python">Python</button>
+                        <button class="filter-btn" data-filter=".flutter">Flutter</button>
                     </div>
                 </div>
             </div>
 
             <!-- Projects Grid -->
             <div class="row projects-grid">
-                <!-- Project 1 -->
-                <div class="col-lg-4 col-md-6 mb-4 project-item frontend">
+                <!-- Project 1: Portfolio Website -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item frontend web">
                     <div class="project-card glass">
-                        <div class="project-image">
-                            <img src="images/LOGO.png" alt="Project 1"
-                                class="img-fluid">
+                        <div class="project-image d-flex align-items-center justify-content-center" style="height:180px; background:#232526;">
+                            <i class="bi bi-person-badge" style="font-size:4rem; color:#ffd369;"></i>
                             <div class="project-overlay">
                                 <div class="project-links">
-                                    <a href="#" class="project-link" target="_blank" aria-label="View Project">
-                                        <i class="bi bi-eye"></i>
-                                    </a>
-                                    <a href="#" class="project-link" target="_blank" aria-label="GitHub Repo">
-                                        <i class="bi bi-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h5 class="project-title">E-Commerce Website</h5>
-                            <p class="project-description">A modern e-commerce platform built with HTML, CSS, and
-                                JavaScript featuring responsive design and smooth animations.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Bootstrap</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="col-lg-4 col-md-6 mb-4 project-item web">
-                    <div class="project-card glass">
-                        <div class="project-image">
-                            <img src="images/LOGO.png" alt="Project 2"
-                                class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link" target="_blank" aria-label="View Project">
-                                        <i class="bi bi-eye"></i>
-                                    </a>
-                                    <a href="#" class="project-link" target="_blank" aria-label="GitHub Repo">
-                                        <i class="bi bi-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h5 class="project-title">Restaurant Landing Page</h5>
-                            <p class="project-description">A beautiful restaurant landing page with modern UI/UX design,
-                                featuring interactive elements and smooth scrolling effects.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="col-lg-4 col-md-6 mb-4 project-item python">
-                    <div class="project-card glass">
-                        <div class="project-image">
-                            <img src="images/LOGO.png" alt="Project 3"
-                                class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link" target="_blank" aria-label="View Project">
-                                        <i class="bi bi-eye"></i>
-                                    </a>
-                                    <a href="#" class="project-link" target="_blank" aria-label="GitHub Repo">
+                                    <a href="https://github.com/Paban-Bhandari/Portfolio" class="project-link" target="_blank" aria-label="GitHub Repo">
                                         <i class="bi bi-github"></i>
                                     </a>
                                 </div>
@@ -334,19 +272,65 @@
                         </div>
                         <div class="project-content">
                             <h5 class="project-title">Portfolio Website</h5>
-                            <p class="project-description">A personal portfolio website showcasing projects and skills
-                                with modern design and interactive animations.</p>
+                            <p class="project-description">A personal portfolio website to showcase my projects, skills, and experience. Designed with a modern and responsive layout.</p>
                             <div class="project-tech">
-                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">HTML</span>
                                 <span class="tech-tag">CSS</span>
                                 <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2: To-Do List -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item python web">
+                    <div class="project-card glass">
+                        <div class="project-image d-flex align-items-center justify-content-center" style="height:180px; background:#232526;">
+                            <i class="bi bi-list-check" style="font-size:4rem; color:#ffd369;"></i>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/Paban-Bhandari/todo_list" class="project-link" target="_blank" aria-label="GitHub Repo">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="project-title">To-Do List</h5>
+                            <p class="project-description">A simple and effective to-do list application built with Django for the backend. Manage daily tasks with user authentication and persistent storage.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Django</span>
                                 <span class="tech-tag">Python</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3: Memory Game -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item flutter mobile">
+                    <div class="project-card glass">
+                        <div class="project-image d-flex align-items-center justify-content-center" style="height:180px; background:#232526;">
+                            <i class="bi bi-puzzle" style="font-size:4rem; color:#ffd369;"></i>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/Paban-Bhandari/Memory_Game" class="project-link" target="_blank" aria-label="GitHub Repo">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="project-title">Memory Game</h5>
+                            <p class="project-description">A fun and interactive memory matching game built with Flutter. Test and improve your memory skills on any device!</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Dart</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project 4 -->
-                <div class="col-lg-4 col-md-6 mb-4 project-item web">
+                <div class="col-lg-4 col-md-6 mb-4 project-item ">
                     <div class="project-card glass">
                         <div class="project-image">
                             <img src="images/LOGO.png" alt="Project 4"
@@ -376,7 +360,7 @@
                     </div>
                 </div>
                 <!-- Project 5 -->
-                <div class="col-lg-4 col-md-6 mb-4 project-item python">
+                <div class="col-lg-4 col-md-6 mb-4 project-item ">
                     <div class="project-card glass">
                         <div class="project-image">
                             <img src="images/LOGO.png" alt="Project 5"
@@ -406,7 +390,7 @@
                     </div>
                 </div>
                 <!-- Project 6 -->
-                <div class="col-lg-4 col-md-6 mb-4 project-item frontend">
+                <div class="col-lg-4 col-md-6 mb-4 project-item ">
                     <div class="project-card glass">
                         <div class="project-image">
                             <img src="images/LOGO.png" alt="Project 6"

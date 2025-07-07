@@ -277,6 +277,10 @@ section {
 }
 .filter-buttons {
     margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
 }
 .filter-btn {
     background: none;
@@ -666,4 +670,13 @@ section {
     background: linear-gradient(90deg, #ffd369 0%, #ffb347 100%);
     z-index: 10001;
     transition: width 0.1s ease;
+}
+
+@media (max-width: 600px) {
+  .filter-buttons {
+    gap: 0.5rem 1rem;
+  }
+  .filter-btn {
+    margin: 0;
+  }
 }
