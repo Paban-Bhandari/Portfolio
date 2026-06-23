@@ -1,7 +1,7 @@
 // Initialize EmailJS
-(function(){
+if (typeof emailjs !== 'undefined') {
     emailjs.init("Jy04q4eVfNerskfqF"); // Replace with your EmailJS user ID if needed
-})();
+}
 
 // Loading Screen Management
 document.addEventListener('DOMContentLoaded', function() {
@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Hide loading screen after page loads (skip delay if user prefers reduced motion)
     window.addEventListener('load', function() {
+        if (!loadingScreen) return;
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         const delay = prefersReducedMotion ? 0 : 400;
         setTimeout(() => {
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollProgress = document.getElementById('scrollProgress');
     
     window.addEventListener('scroll', function() {
+        if (!scrollProgress) return;
         const scrollTop = window.pageYOffset;
         const docHeight = document.body.offsetHeight - window.innerHeight;
         const scrollPercent = (scrollTop / docHeight) * 100;
@@ -49,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Close mobile menu if open
                 const navbarCollapse = document.querySelector('.navbar-collapse');
-                if (navbarCollapse.classList.contains('show')) {
+                if (navbarCollapse && navbarCollapse.classList.contains('show') && typeof bootstrap !== 'undefined') {
                     const bsCollapse = new bootstrap.Collapse(navbarCollapse);
                     bsCollapse.hide();
                 }
@@ -92,6 +94,13 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending...';
             submitBtn.disabled = true;
             
+            if (typeof emailjs === 'undefined') {
+                showNotification('Email service is unavailable right now. Please email me directly.', 'error');
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                return;
+            }
+
             // Send email using EmailJS
             emailjs.sendForm('service_dwnmjzs', 'template_ds7q5ek', this)
                 .then(function() {
@@ -113,8 +122,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectItems = document.querySelectorAll('.project-item');
     filterButtons.forEach(btn => {
         btn.addEventListener('click', function() {
-            filterButtons.forEach(b => b.classList.remove('active'));
+            filterButtons.forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-pressed', 'false');
+            });
             this.classList.add('active');
+            this.setAttribute('aria-pressed', 'true');
             const filter = this.getAttribute('data-filter');
             projectItems.forEach(item => {
                 if (filter === '*' || item.classList.contains(filter.replace('.', ''))) {
@@ -131,11 +144,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const typingText = document.getElementById('typingText');
     if (typingText) {
         const roles = [
-            "Web Developer",
-            "Frontend Enthusiast",
-            "UI/UX Learner",
-            "Tech Explorer",
-            "Problem Solver"
+            "Python Development",
+            "Django Learning",
+            "Frontend Basics",
+            "Building Projects",
+            "Full-Stack Practice"
         ];
         let roleIndex = 0;
         let charIndex = 0;
@@ -301,54 +314,3 @@ function showNotification(message, type = 'success') {
         setTimeout(() => document.body.removeChild(notification), 300);
     }, 3000);
 }
-
-// Add notification styles dynamically
-const notificationStyles = `
-<style>
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    padding: 1rem 1.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    z-index: 9999;
-    transform: translateX(400px);
-    opacity: 0;
-    transition: all 0.3s ease;
-    border-left: 4px solid #ffd369;
-}
-
-.notification.show {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.notification-success {
-    border-left-color: #28a745;
-}
-
-.notification-error {
-    border-left-color: #dc3545;
-}
-
-.notification-content {
-    display: flex;
-    align-items: center;
-    color: #333;
-    font-weight: 500;
-}
-
-.notification-success .bi {
-    color: #28a745;
-}
-
-.notification-error .bi {
-    color: #dc3545;
-}
-</style>
-`;
-
-document.head.insertAdjacentHTML('beforeend', notificationStyles);

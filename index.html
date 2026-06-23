@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Paban Bhandari | Portfolio</title>
     <meta name="description"
-        content="Portfolio of Paban Bhandari, a passionate web developer specializing in modern, responsive websites and web applications.">
+        content="Portfolio of Paban Bhandari, a Python developer learning Django and building full-stack web projects with HTML, CSS, JavaScript, and Tailwind CSS.">
     <meta property="og:title" content="Paban Bhandari | Portfolio">
-    <meta property="og:description" content="Portfolio of Paban Bhandari, a passionate web developer.">
+    <meta property="og:description" content="Portfolio of Paban Bhandari, a Python developer learning Django and full-stack web development.">
     <meta property="og:url" content="https://pabanbhandari.com">
     <meta property="og:image" content="https://pabanbhandari.com/images/profile-photo.jpg">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Paban Bhandari | Portfolio">
-    <meta name="twitter:description" content="Portfolio of Paban Bhandari, a passionate web developer.">
+    <meta name="twitter:description" content="Portfolio of Paban Bhandari, a Python developer learning Django and full-stack web development.">
     <meta name="twitter:image" content="https://pabanbhandari.com/images/profile-photo.jpg">
     <link rel="icon" type="image/png" href="images/LOGO.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,8 +27,8 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Paban Bhandari",
-        "jobTitle": "Web Developer",
-        "description": "Passionate web developer specializing in modern, responsive websites and web applications",
+        "jobTitle": "Python Developer",
+        "description": "Python developer learning Django and building full-stack web projects with HTML, CSS, JavaScript, and Tailwind CSS",
         "url": "https://pabanbhandari.com",
         "image": "https://pabanbhandari.com/images/profile-photo.jpg",
         "sameAs": [
@@ -45,12 +45,12 @@
             "HTML5",
             "CSS3",
             "JavaScript",
-            "Bootstrap",
+            "Tailwind CSS",
             "Python",
+            "Django",
             "Web Development",
-            "Frontend Development",
-            "Responsive Design",
-            "UI/UX Design"
+            "Full-Stack Development",
+            "Responsive Design"
         ],
         "worksFor": {
             "@type": "Organization",
@@ -96,11 +96,6 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 
 <body>
@@ -112,7 +107,7 @@
             </div>
             <div class="loading-text">
                 <h3>Paban Bhandari</h3>
-                <p>Loading amazing things...</p>
+                <p>Preparing portfolio...</p>
             </div>
             <div class="loading-spinner">
                 <div class="spinner"></div>
@@ -126,7 +121,7 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="images/LOGO.png" alt="Paban Logo" width="40" height="40" class="me-2" />
-                <span class="fw-bold" style="font-family: 'Montserrat', sans-serif;">Paban Bhandari</span>
+                <span class="fw-bold brand-title">Paban Bhandari</span>
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -148,28 +143,36 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section d-flex align-items-center position-relative"
-        style="height: 90vh; background: linear-gradient(135deg, #232526 0%, #414345 100%); overflow: hidden;">
+    <section id="home" class="hero-section d-flex align-items-center position-relative">
         <!-- Particle Animation Background -->
         <div id="particles-js" class="particles-container"></div>
         
         <!-- SVG Animated Background -->
-        <svg class="position-absolute top-0 start-0 w-100 h-100" style="z-index:0; opacity:0.15;"
+        <svg class="hero-wave position-absolute top-0 start-0 w-100 h-100"
             preserveAspectRatio="none" viewBox="0 0 1440 320">
             <path fill="#ffd369" fill-opacity="1"
                 d="M0,160L60,176C120,192,240,224,360,229.3C480,235,600,213,720,186.7C840,160,960,128,1080,106.7C1200,85,1320,75,1380,69.3L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
             </path>
         </svg>
-        <div class="container position-relative" style="z-index:1;">
+        <div class="container position-relative hero-content-layer">
             <div class="row justify-content-center align-items-center">
-                <div class="col-lg-8">
+                <div class="col-lg-9">
                     <div class="hero-glass glass-animated d-flex flex-column align-items-center justify-content-center text-center p-5 my-3"
-                        style="padding-bottom: 4.5rem;">
-                        <h1 class="display-4 fw-bold mb-2" style="font-family: 'Montserrat', sans-serif;">Hi, I'm <span
+                        >
+                        <p class="hero-kicker mb-3">Python + Django Learner</p>
+                        <h1 class="display-4 fw-bold mb-3 section-heading-font">Hi, I'm <span
                                 class="text-gradient">Paban Bhandari</span></h1>
-                        <p class="lead mb-3">I build responsive web apps with JavaScript, Django, and Flutter — from full-stack tools to mobile games.</p>
-                        <p class="lead mb-4">A passionate <span class="typing-text" id="typingText" aria-live="polite">Web Developer</span>
+                        <p class="lead hero-summary mb-3">I build web projects with Python, Django, and frontend technologies while improving my full-stack development skills.</p>
+                        <p class="lead mb-4">Focused on <span class="typing-text" id="typingText" aria-live="polite">Python Development</span>
                         </p>
+                        <div class="hero-skills mb-4" aria-label="Primary skills">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Tailwind CSS</span>
+                        </div>
                         <!-- Social Media Links -->
                         <div class="social-links mb-4">
                             <a href="https://www.linkedin.com/in/paban-bhandari-b38239264/" target="_blank" rel="noopener noreferrer"
@@ -187,10 +190,10 @@
                         </div>
                         <div class="d-flex flex-wrap gap-3 justify-content-center">
                             <a href="#projects" class="btn btn-yellow btn-lg shadow hero-learn-btn">
-                                <i class="bi bi-grid me-2"></i>View My Work
+                                <i class="bi bi-code-square me-2"></i>View Projects
                             </a>
-                            <a href="#about" class="btn btn-outline-light btn-lg shadow hero-learn-btn">
-                                <i class="bi bi-arrow-down me-2"></i>About Me
+                            <a href="#contact" class="btn btn-outline-light btn-lg shadow hero-learn-btn">
+                                <i class="bi bi-envelope me-2"></i>Contact Me
                             </a>
                         </div>
                     </div>
@@ -207,34 +210,37 @@
                     <div class="about-photo-wrapper mx-auto">
                         <div class="about-photo-glow-custom"></div>
                         <img src="images/profile-photo.jpg" alt="Paban Bhandari"
-                            class="img-fluid about-img about-img-rounded shadow-lg profile-img"
-                            style="max-width: 350px;">
+                            class="img-fluid about-img about-img-rounded shadow-lg profile-img">
                         <div class="about-photo-border"></div>
                     </div>
                 </div>
                 <div class="col-lg-7 text-white">
-                    <h2 class="mb-4 section-title" style="font-family: 'Montserrat', sans-serif;">About Me</h2>
+                    <h2 class="mb-4 section-title section-heading-font">About Me</h2>
                     <p>
-                        I'm <strong>Paban Bhandari</strong>, a web developer based in Kathmandu, Nepal. I work across
-                        the stack — from responsive frontends to Django backends and Flutter mobile apps — always focused
-                        on clean UI and code that actually ships.
+                        I'm <strong>Paban Bhandari</strong>, a Python developer from Kathmandu, Nepal. I am focused on
+                        becoming a full-stack web developer using Python and Django.
                     </p>
                     <p>
-                        Recent projects include this portfolio site, a Django todo app with user auth, and a Flutter
-                        memory game. I'm currently deepening my skills in React and modern JavaScript frameworks.
+                        Python is my strongest area, and I have basic to intermediate knowledge of Django. I am actively
+                        learning Django by building projects, understanding backend logic, working with data, and improving
+                        how I structure web applications.
+                    </p>
+                    <p>
+                        I also work with frontend technologies including HTML, CSS, JavaScript, and Tailwind CSS. My goal is
+                        to keep building real projects, improve step by step, and become confident in both backend and
+                        frontend development.
                     </p>
                     <a href="cv.pdf" class="btn btn-yellow btn-sm mb-3" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-download"></i> Download CV
                     </a>
                     <p><strong>Tech Stack:</strong></p>
                     <div class="tech-stack">
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">Django</span>
                         <span class="tech-item">HTML5</span>
                         <span class="tech-item">CSS3</span>
                         <span class="tech-item">JavaScript</span>
-                        <span class="tech-item">Bootstrap</span>
-                        <span class="tech-item">Python</span>
-                        <span class="tech-item">Django</span>
-                        <span class="tech-item">Flutter</span>
+                        <span class="tech-item">Tailwind CSS</span>
                         <span class="tech-item">Git</span>
                     </div>
                 </div>
@@ -247,8 +253,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="section-title" style="font-family: 'Montserrat', sans-serif;">My Projects</h2>
-                    <p class="section-subtitle">Explore some of my recent work and creative projects</p>
+                    <h2 class="section-title section-heading-font">My Projects</h2>
+                    <p class="section-subtitle">Selected work showing backend logic, full-stack structure, and practical UI execution</p>
                 </div>
             </div>
 
@@ -256,11 +262,11 @@
             <div class="row mb-4">
                 <div class="col-12 text-center">
                     <div class="filter-buttons">
-                        <button class="filter-btn active" data-filter="*">All</button>
-                        <button class="filter-btn" data-filter=".web">Web Development</button>
-                        <button class="filter-btn" data-filter=".frontend">Frontend</button>
-                        <button class="filter-btn" data-filter=".python">Python</button>
-                        <button class="filter-btn" data-filter=".flutter">Flutter</button>
+                        <button class="filter-btn active" type="button" data-filter="*" aria-pressed="true">All</button>
+                        <button class="filter-btn" type="button" data-filter=".web" aria-pressed="false">Full-Stack / Web</button>
+                        <button class="filter-btn" type="button" data-filter=".frontend" aria-pressed="false">Frontend</button>
+                        <button class="filter-btn" type="button" data-filter=".python" aria-pressed="false">Python</button>
+                        <button class="filter-btn" type="button" data-filter=".practice" aria-pressed="false">Practice</button>
                     </div>
                 </div>
             </div>
@@ -270,8 +276,8 @@
                 <!-- Project 1: Portfolio Website -->
                 <div class="col-lg-4 col-md-6 mb-4 project-item frontend web">
                     <div class="project-card glass">
-                        <div class="project-image d-flex align-items-center justify-content-center" style="height:180px; background:#232526;">
-                            <i class="bi bi-person-badge" style="font-size:4rem; color:#ffd369;"></i>
+                        <div class="project-image project-icon-panel d-flex align-items-center justify-content-center">
+                            <i class="bi bi-person-badge project-card-icon"></i>
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="https://pabanbhandari.com" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Live Demo">
@@ -285,7 +291,7 @@
                         </div>
                         <div class="project-content">
                             <h5 class="project-title">Portfolio Website</h5>
-                            <p class="project-description">My personal site — built from scratch with responsive layout, contact form, and project showcase. Deployed at pabanbhandari.com.</p>
+                            <p class="project-description">Static portfolio built with structured content, responsive Bootstrap layout, EmailJS contact handling, project filtering, SEO metadata, and production-ready deployment setup.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">HTML</span>
                                 <span class="tech-tag">CSS</span>
@@ -298,8 +304,8 @@
                 <!-- Project 2: To-Do List -->
                 <div class="col-lg-4 col-md-6 mb-4 project-item python web">
                     <div class="project-card glass">
-                        <div class="project-image d-flex align-items-center justify-content-center" style="height:180px; background:#232526;">
-                            <i class="bi bi-list-check" style="font-size:4rem; color:#ffd369;"></i>
+                        <div class="project-image project-icon-panel d-flex align-items-center justify-content-center">
+                            <i class="bi bi-list-check project-card-icon"></i>
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="https://github.com/Paban-Bhandari/todo_list" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repo">
@@ -310,7 +316,7 @@
                         </div>
                         <div class="project-content">
                             <h5 class="project-title">To-Do List</h5>
-                            <p class="project-description">Full-stack Django app with user authentication and persistent task storage — my first deep dive into CRUD, sessions, and backend architecture.</p>
+                            <p class="project-description">Django CRUD application with user authentication, session-based access, persistent task storage, and backend logic organized around practical user workflows.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">Django</span>
                                 <span class="tech-tag">Python</span>
@@ -321,10 +327,10 @@
                     </div>
                 </div>
                 <!-- Project 3: Memory Game -->
-                <div class="col-lg-4 col-md-6 mb-4 project-item flutter">
+                <div class="col-lg-4 col-md-6 mb-4 project-item practice">
                     <div class="project-card glass">
-                        <div class="project-image d-flex align-items-center justify-content-center" style="height:180px; background:#232526;">
-                            <i class="bi bi-puzzle" style="font-size:4rem; color:#ffd369;"></i>
+                        <div class="project-image project-icon-panel d-flex align-items-center justify-content-center">
+                            <i class="bi bi-puzzle project-card-icon"></i>
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="https://github.com/Paban-Bhandari/Memory_Game" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repo">
@@ -335,10 +341,10 @@
                         </div>
                         <div class="project-content">
                             <h5 class="project-title">Memory Game</h5>
-                            <p class="project-description">Cross-platform Flutter card-matching game with animated UI and state management — my introduction to mobile development with Dart.</p>
+                            <p class="project-description">Practice memory game project focused on matching logic, interaction flow, and building a simple interactive user experience.</p>
                             <div class="project-tech">
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">Dart</span>
+                                <span class="tech-tag">Practice Project</span>
+                                <span class="tech-tag">Game Logic</span>
                             </div>
                         </div>
                     </div>
@@ -352,8 +358,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="section-title" style="font-family: 'Montserrat', sans-serif;">Get In Touch</h2>
-                    <p class="section-subtitle">Let's work together to bring your ideas to life</p>
+                    <h2 class="section-title section-heading-font">Get In Touch</h2>
+                    <p class="section-subtitle">Open to junior backend, full-stack, internship, and freelance Django opportunities</p>
                 </div>
             </div>
 
