@@ -7,12 +7,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const loadingScreen = document.getElementById('loadingScreen');
     
-    // Hide loading screen after page loads
+    // Hide loading screen after page loads (skip delay if user prefers reduced motion)
     window.addEventListener('load', function() {
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const delay = prefersReducedMotion ? 0 : 400;
         setTimeout(() => {
             loadingScreen.classList.add('fade-out');
             document.body.classList.add('fade-in');
-        }, 1500);
+        }, delay);
     });
 
 
